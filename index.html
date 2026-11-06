@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thought Analyzing Machine</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="computer">
+        <h1>Thought Analyzing Machine</h1>
+        <p class="subtitle">I will analyze your thoughts.</p>
+        <div class="screen">
+            <p class="status">SYSTEM READY...</p>
+            <h3>What's on your mind?</h3>
+            <label class="language-label" for="languageSelect">Response language</label>
+            <select id="languageSelect">
+                <option value="en">English</option>
+                <option value="tl">Filipino (Tagalog)</option>
+            </select>
+            <textarea id="thought" placeholder="Type your thoughts here... (What's been making you overthink?)"></textarea>
+            <button id="analyzeBtn">Analyze My Thoughts</button>
+            <div id="loading">
+                <p id="loadingText">Waiting for input...</p>
+                <div class="progress">
+                    <div id="bar"></div>
+                </div>
+            </div>
+            <div id="result" aria-live="polite">
+                <h3>ANALYSIS COMPLETE</h3>
+                <p id="resultText"></p>
+                <button id="againBtn">Analyze Another Thought</button>
+            </div>
+        </div>
+        <a href="index.html" class="home">Back to Home</a>
+        <a href="motivation.html" class="motivation">Motivation</a>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

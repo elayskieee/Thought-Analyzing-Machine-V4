@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Watch, and reflect</title>
+    <link rel="stylesheet" href="motivation.css">
+</head>
+<body>
+    <video id="work" autoplay playsinline>
+        <source src="work.mp4" type="video/mp4">
+    </video>
+    <div id="ending">
+        <h1>How are you feeling now?</h1>
+        <p>You are not alone</p>
+        <a href="index.html">Back to Home</a>
+    </div>
+    <script>
+        var video = document.getElementById("work");
+        var ending = document.getElementById("ending");
+        ending.style.display = "none";
+        video.play().catch(function() {
+            video.controls = true;
+        });
+        video.addEventListener("ended", function() {
+            alert("Video ended!");
+            video.style.display = "none";
+            ending.style.display = "flex";
+        });
+    </script>
+</body>
+</html>
